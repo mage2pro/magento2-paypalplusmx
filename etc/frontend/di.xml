@@ -30,7 +30,10 @@
         <arguments>
             <argument name="layoutReaderPool" xsi:type="object">pageConfigRenderPool</argument>
             <argument name="generatorPool" xsi:type="object">pageLayoutGeneratorPool</argument>
+            <!--
             <argument name="template" xsi:type="string">qbo_PayPalPlusMx::root.phtml</argument>
+            -->
+			<argument name="template" xsi:type="string">Magento_Theme::root.phtml</argument>
         </arguments>
     </type>
     <preference for="Magento\Paypal\Model\Ipn" type="qbo\PayPalPlusMx\Model\Ipn" />
