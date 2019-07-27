@@ -5,12 +5,12 @@ Magento 2 PayPal Plus (México)
 
 From the root folder of your project:
 ```
-composer require qbo/module-paypalplusmx
+composer require mage2pro/module-paypalplusmx
 php bin/magento setup:upgrade
 ```
 If something goes wrong with dependencies, and youre OK to ignore it,  add the following line to your composer.json under "require" section:
 ```
-"qbo/module-paypalplusmx": "dev-master"
+"mage2pro/module-paypalplusmx": "dev-master"
 ```
 Then update your dependencies
 ```
