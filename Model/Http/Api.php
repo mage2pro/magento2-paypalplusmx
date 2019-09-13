@@ -1,45 +1,13 @@
 <?php
+namespace Dfe\PayPalPlusMx\Model\Http;
 
-/**
- * MMDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDMMM
- * MDDDDDDDDDDDDDNNDDDDDDDDDDDDDDDDD=.DDDDDDDDDDDDDDDDDDDDDDDMM
- * MDDDDDDDDDDDD===8NDDDDDDDDDDDDDDD=.NDDDDDDDDDDDDDDDDDDDDDDMM
- * DDDDDDDDDN===+N====NDDDDDDDDDDDDD=.DDDDDDDDDDDDDDDDDDDDDDDDM
- * DDDDDDD$DN=8DDDDDD=~~~DDDDDDDDDND=.NDDDDDNDNDDDDDDDDDDDDDDDM
- * DDDDDDD+===NDDDDDDDDN~~N........8$........D ........DDDDDDDM
- * DDDDDDD+=D+===NDDDDDN~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDN
- * DDDDDDD++DDDN===DDDDD~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDD
- * DDDDDDD++DDDDD==DDDDN~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDN
- * DDDDDDD++DDDDD==DDDDD~~N.... ...8$........D ........DDDDDDDM
- * DDDDDDD$===8DD==DD~~~~DDDDDDDDN.IDDDDDDDDDDDNDDDDDDNDDDDDDDM
- * NDDDDDDDDD===D====~NDDDDDD?DNNN.IDNODDDDDDDDN?DNNDDDDDDDDDDM
- * MDDDDDDDDDDDDD==8DDDDDDDDDDDDDN.IDDDNDDDDDDDDNDDNDDDDDDDDDMM
- * MDDDDDDDDDDDDDDDDDDDDDDDDDDDDDN.IDDDDDDDDDDDDDDDDDDDDDDDDDMM
- * MMDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDMMM
- *
- * @author José Castañeda <jose@qbo.tech>
- * @category qbo
- * @package qbo\PayPalPlusMx\
- * @copyright   qbo (http://www.qbo.tech)
- * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * 
- * © 2016 QBO DIGITAL SOLUTIONS. 
- *
- */
-namespace qbo\PayPalPlusMx\Model\Http;
-
-use qbo\PayPalPlusMx\Model\Http\Config;
-use qbo\PayPalPlusMx\Model\Http\Payment;
+use Dfe\PayPalPlusMx\Model\Http\Config;
+use Dfe\PayPalPlusMx\Model\Http\Payment;
 use Magento\Framework\HTTP\ZendClientFactory;
 use Magento\Framework\HTTP\ZendClient;
 use Magento\Framework\DataObject;
-use qbo\PayPalPlusMx\Helper\Profile;
-use qbo\PayPalPlusMx\Model\Config as PayPalConfig;
-/**
- * PayPal Plus API Client
- * 
- * @author José Catsañeda <jose@qbo.tech>
- */
+use Dfe\PayPalPlusMx\Helper\Profile;
+use Dfe\PayPalPlusMx\Model\Config as PayPalConfig;
 class Api 
 {
     const XML_PATH_STORE_NAME    = 'general/store_information/name';
@@ -92,7 +60,7 @@ class Api
      */
     protected $_request;
     /**
-     * @var qbo\PayPalPlusMx\Model\Http\PaymentRequest
+     * @var Dfe\PayPalPlusMx\Model\Http\PaymentRequest
      */
     protected $_paymentRequest;
     /**
@@ -136,7 +104,7 @@ class Api
     protected $scopeConfig;
     /**
      *
-     * @var qbo\PayPalPlusMx\Helper\Profile 
+     * @var Dfe\PayPalPlusMx\Helper\Profile
      */
     protected $_profileHelper;
     /**

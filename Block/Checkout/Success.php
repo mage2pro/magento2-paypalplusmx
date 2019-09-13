@@ -1,36 +1,7 @@
 <?php
-/**
- * MMDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDMMM
- * MDDDDDDDDDDDDDNNDDDDDDDDDDDDDDDDD=.DDDDDDDDDDDDDDDDDDDDDDDMM
- * MDDDDDDDDDDDD===8NDDDDDDDDDDDDDDD=.NDDDDDDDDDDDDDDDDDDDDDDMM
- * DDDDDDDDDN===+N====NDDDDDDDDDDDDD=.DDDDDDDDDDDDDDDDDDDDDDDDM
- * DDDDDDD$DN=8DDDDDD=~~~DDDDDDDDDND=.NDDDDDNDNDDDDDDDDDDDDDDDM
- * DDDDDDD+===NDDDDDDDDN~~N........8$........D ........DDDDDDDM
- * DDDDDDD+=D+===NDDDDDN~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDN
- * DDDDDDD++DDDN===DDDDD~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDD
- * DDDDDDD++DDDDD==DDDDN~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDN
- * DDDDDDD++DDDDD==DDDDD~~N.... ...8$........D ........DDDDDDDM
- * DDDDDDD$===8DD==DD~~~~DDDDDDDDN.IDDDDDDDDDDDNDDDDDDNDDDDDDDM
- * NDDDDDDDDD===D====~NDDDDDD?DNNN.IDNODDDDDDDDN?DNNDDDDDDDDDDM
- * MDDDDDDDDDDDDD==8DDDDDDDDDDDDDN.IDDDNDDDDDDDDNDDNDDDDDDDDDMM
- * MDDDDDDDDDDDDDDDDDDDDDDDDDDDDDN.IDDDDDDDDDDDDDDDDDDDDDDDDDMM
- * MMDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDMMM
- *
- * @author José Castañeda <jose@qbo.tech>
- * @category qbo
- * @package qbo\PayPalPlusMx\
- * @copyright   qbo (http://www.qbo.tech)
- * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * 
- * © 2016 QBO DIGITAL SOLUTIONS. 
- *
- */
-namespace qbo\PayPalPlusMx\Block\Checkout;
-
-use qbo\PayPalPlusMx\Model\Payment;
-
-class Success extends \Magento\Checkout\Block\Onepage\Success
-{
+namespace Dfe\PayPalPlusMx\Block\Checkout;
+use Dfe\PayPalPlusMx\Model\Payment;
+class Success extends \Magento\Checkout\Block\Onepage\Success {
     const SCOPE_STORE = 'store';
     const XML_PATH_PENDING_PAYMENT_MESSAGE = 'payment/qbo_paypalplusmx/pending_payment_message';
     const XML_PATH_IS_METHOD_ACTIVE        = 'payment/qbo_paypalplusmx/active';
@@ -115,7 +86,7 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
      */
     public function getPendingMessage()
     {
-        if($this->isPaymentPending() && $this->_order->getPayment()->getMethod() == \qbo\PayPalPlusMx\Model\Payment::CODE) {
+        if($this->isPaymentPending() && $this->_order->getPayment()->getMethod() == \Dfe\PayPalPlusMx\Model\Payment::CODE) {
             return $this->getConfigValue(self::XML_PATH_PENDING_PAYMENT_MESSAGE);
         }
         return '';
@@ -130,7 +101,7 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
         if(!$this->_order->getPayment()){
             return;
         }
-        if($this->_order->getPayment()->getMethod() == \qbo\PayPalPlusMx\Model\Payment::CODE) {
+        if($this->_order->getPayment()->getMethod() == \Dfe\PayPalPlusMx\Model\Payment::CODE) {
            return self::PAYPAL_LOGO;
         }
     }

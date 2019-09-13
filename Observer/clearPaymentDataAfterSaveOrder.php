@@ -1,33 +1,9 @@
 <?php
-/**
- * MMDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDMMM
- * MDDDDDDDDDDDDDNNDDDDDDDDDDDDDDDDD=.DDDDDDDDDDDDDDDDDDDDDDDMM
- * MDDDDDDDDDDDD===8NDDDDDDDDDDDDDDD=.NDDDDDDDDDDDDDDDDDDDDDDMM
- * DDDDDDDDDN===+N====NDDDDDDDDDDDDD=.DDDDDDDDDDDDDDDDDDDDDDDDM
- * DDDDDDD$DN=8DDDDDD=~~~DDDDDDDDDND=.NDDDDDNDNDDDDDDDDDDDDDDDM
- * DDDDDDD+===NDDDDDDDDN~~N........8$........D ........DDDDDDDM
- * DDDDDDD+=D+===NDDDDDN~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDN
- * DDDDDDD++DDDN===DDDDD~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDD
- * DDDDDDD++DDDDD==DDDDN~~N.?DDDDDDDDDDDDDD:.D .DDDDD .DDDDDDDN
- * DDDDDDD++DDDDD==DDDDD~~N.... ...8$........D ........DDDDDDDM
- * DDDDDDD$===8DD==DD~~~~DDDDDDDDN.IDDDDDDDDDDDNDDDDDDNDDDDDDDM
- * NDDDDDDDDD===D====~NDDDDDD?DNNN.IDNODDDDDDDDN?DNNDDDDDDDDDDM
- * MDDDDDDDDDDDDD==8DDDDDDDDDDDDDN.IDDDNDDDDDDDDNDDNDDDDDDDDDMM
- * MDDDDDDDDDDDDDDDDDDDDDDDDDDDDDN.IDDDDDDDDDDDDDDDDDDDDDDDDDMM
- * MMDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDMMM
- *
- * @author José Castañeda <jose@qbo.tech>
- * @category qbo
- * @package qbo\PayPalPlusMx\
- * 
- * © 2016 QBO DIGITAL SOLUTIONS. 
- *
- */
-namespace qbo\PayPalPlusMx\Observer;
+namespace Dfe\PayPalPlusMx\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Event\Observer as EventObserver;
-use qbo\PayPalPlusMx\Model\Http\Api;
+use Dfe\PayPalPlusMx\Model\Http\Api;
 
 /**
  * PayPalPlus module observer
@@ -40,7 +16,7 @@ class clearPaymentDataAfterSaveOrder implements ObserverInterface
     protected $_logger;
     /**
      *
-     * @var qbo\PayPalPlusMx\Model\Http\Api 
+     * @var Dfe\PayPalPlusMx\Model\Http\Api
      */
     protected $_api;
     /**
